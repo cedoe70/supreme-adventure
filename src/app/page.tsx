@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, CardBody, CardHeader, Input } from "@heroui/react";
+import { Button, Card, CardBody, CardHeader, Input } from "@nextui-org/react";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center text-center px-6 gap-12">
+    <main className="min-h-screen flex flex-col items-center justify-center text-center px-6 gap-12 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
       
       {/* Hero Section */}
       <section>
@@ -33,7 +33,7 @@ export default function HomePage() {
           The fastest, most secure way to send and receive cryptocurrency — anywhere in the world.
         </motion.p>
 
-        <Button color="primary" size="lg">
+        <Button color="primary" size="lg" radius="full" variant="shadow">
           Get Started
         </Button>
       </section>
@@ -47,7 +47,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
           >
-            <Card>
+            <Card className="bg-gray-900 border border-gray-700">
               <CardHeader className="flex justify-between">
                 <h3 className="text-xl font-semibold">{coin.name}</h3>
                 <span className="text-green-400">{coin.change}</span>
@@ -67,11 +67,13 @@ export default function HomePage() {
         transition={{ delay: 0.6 }}
         className="w-full max-w-md"
       >
-        <Card>
+        <Card className="bg-gray-900 border border-gray-700">
           <CardBody className="flex flex-col gap-4">
-            <Input placeholder="Enter wallet address" fullWidth />
-            <Input placeholder="Enter amount" type="number" fullWidth />
-            <Button color="secondary">Send Payment</Button>
+            <Input placeholder="Enter wallet address" fullWidth variant="bordered" />
+            <Input placeholder="Enter amount" type="number" fullWidth variant="bordered" />
+            <Button color="secondary" size="lg" radius="sm" variant="shadow">
+              Send Payment
+            </Button>
           </CardBody>
         </Card>
       </motion.section>
