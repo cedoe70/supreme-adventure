@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@nextui-org/react": "latest",
     "@heroui/react": "latest",
     "framer-motion": "latest",
     "next": "14.2.5",
