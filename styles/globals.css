@@ -2,27 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---- CRYPTO THEME CUSTOM STYLES ---- */
+/* ====== Custom Crypto Styles ====== */
+body {
+  background-color: #0f172a; /* cryptoDark */
+  font-family: 'Inter', sans-serif;
+}
 
-/* Glow Buttons */
 .btn-glow {
-  @apply px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 shadow-lg transition-all duration-300;
-}
-.btn-glow:hover {
-  filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));
+  @apply transition-all duration-300 hover:shadow-glow hover:scale-105;
 }
 
-/* Glassmorphism Cards */
 .card-glass {
-  @apply bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 shadow-lg p-6;
-}
-
-/* Input Styles */
-.input-crypto {
-  @apply w-full px-4 py-3 rounded-lg bg-black/40 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400;
-}
-
-/* Gradient Text */
-.gradient-text {
-  @apply bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent;
+  @apply bg-opacity-10 backdrop-blur-lg border border-white/10;
 }
